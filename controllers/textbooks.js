@@ -49,7 +49,6 @@ exports.getChapters = async (req, res) => {
       `SELECT * FROM chapters WHERE "textbook_id"='${textbookId}'`
     );
     const chapters = data.rows;
-    console.log(chapters);
     if (chapters.length !== 0) {
       res.status(200).json({
         chapters,
@@ -65,13 +64,11 @@ exports.getChapters = async (req, res) => {
 };
 exports.getSubtopics = async (req, res) => {
   const {chapterId} = req.params;
-  console.log(chapterId)
   try {
     const data = await client.query(
       `SELECT * FROM subchapter WHERE "chapter_id"='${chapterId}'`
     ); 
     const subtopics = data.rows;
-    console.log(subtopics);
     if (subtopics.length !== 0) {
       res.status(200).json({
         subtopics,

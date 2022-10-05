@@ -9,7 +9,6 @@ const client = require("./configs/database");
 const authRoute = require("./routes/authRoute");
 const courseRoute = require("./routes/courseRoute");
 
-console.log(process.env);
 client.connect((err) => {
   if (err) {
     console.log(err);
