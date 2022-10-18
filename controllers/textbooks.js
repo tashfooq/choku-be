@@ -1,6 +1,8 @@
 const client = require("../configs/database");
 
 exports.getTextbooks = async (req, res) => {
+  // checking if user passed in
+  console.log(req.user);
   try {
     const data = await client.query(`SELECT * FROM textbooks`);
     const textbooks = data.rows;
@@ -22,6 +24,8 @@ exports.getTextbooks = async (req, res) => {
 };
 
 exports.getTextbookById = async (req, res) => {
+  // checking if user passed in
+  console.log(req.user);
   const { textbookId } = req.params;
   try {
     const data = await client.query(
@@ -43,6 +47,8 @@ exports.getTextbookById = async (req, res) => {
 };
 
 exports.getChapters = async (req, res) => {
+  // checking if user passed in
+  console.log(req.user);
   const { textbookId } = req.params;
   try {
     const data = await client.query(
@@ -63,11 +69,13 @@ exports.getChapters = async (req, res) => {
   }
 };
 exports.getSubtopics = async (req, res) => {
-  const {chapterId} = req.params;
+  // checking if user passed in
+  console.log(req.user);
+  const { chapterId } = req.params;
   try {
     const data = await client.query(
       `SELECT * FROM subchapter WHERE "chapter_id"='${chapterId}'`
-    ); 
+    );
     const subtopics = data.rows;
     if (subtopics.length !== 0) {
       res.status(200).json({
@@ -80,5 +88,5 @@ exports.getSubtopics = async (req, res) => {
     }
   } catch (err) {
     console.log(err);
-  } 
+  }
 };

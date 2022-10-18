@@ -36,7 +36,7 @@ exports.login = async (req, res) => {
           res
             .status(200)
             .cookie("access_token", "Bearer " + token, {
-              expires: new Date(Date.now() + 4 * 3600000), // cookie will be removed after 4 hours
+              expires: new Date(Date.now() + 1 * 1800000), // cookie will be removed after 4 hours
               httpOnly: true,
             })
             .json({

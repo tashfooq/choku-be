@@ -4,7 +4,8 @@
   "description": "Backend for PocDoc",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint . --ext .js --ignore-path .gitignore"
   },
   "author": "",
   "license": "ISC",
@@ -15,5 +16,8 @@
     "express": "^4.17.2",
     "jsonwebtoken": "^8.5.1",
     "pg": "^8.7.3"
+  },
+  "devDependencies": {
+    "eslint": "^8.25.0"
   }
 }

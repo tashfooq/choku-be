@@ -1,0 +1,13 @@
+version: "3.9"
+name: choku
+services:
+  database:
+    image: "postgres:latest"
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mypass
+      POSTGRES_DB: base_db
+    volumes:
+      - ./db-data/:/var/lib/postgresql/data/

@@ -8,8 +8,8 @@ const {
 } = require("../controllers/textbooks");
 const { verifyToken } = require("../middleware/authMiddleware");
 
-//auth middleware
-// router.use(verifyToken);
+// auth middleware
+router.use(verifyToken);
 
 router.get("/textbooks", getTextbooks);
 router.get("/textbooks/:textbookId", getTextbookById);
