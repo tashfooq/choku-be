@@ -5,7 +5,7 @@ const {
   getTextbookById,
   getChapters,
   getSubtopics,
-} = require("../controllers/textbooks");
+} = require("../controllers/texbookController");
 const { verifyToken } = require("../middleware/authMiddleware");
 
 // auth middleware
