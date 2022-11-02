@@ -1,6 +1,6 @@
 const client = require("../configs/database");
 
-exports.getTextbooks = async (req, res) => {
+const getTextbooks = async (req, res) => {
   // checking if user passed in
   console.log(req.user);
   try {
@@ -23,7 +23,7 @@ exports.getTextbooks = async (req, res) => {
   }
 };
 
-exports.getTextbookById = async (req, res) => {
+const getTextbookById = async (req, res) => {
   // checking if user passed in
   console.log(req.user);
   const { textbookId } = req.params;
@@ -46,7 +46,7 @@ exports.getTextbookById = async (req, res) => {
   }
 };
 
-exports.getChapters = async (req, res) => {
+const getChapters = async (req, res) => {
   // checking if user passed in
   console.log(req.user);
   const { textbookId } = req.params;
@@ -68,7 +68,8 @@ exports.getChapters = async (req, res) => {
     console.log(err);
   }
 };
-exports.getSubtopics = async (req, res) => {
+
+const getSubtopics = async (req, res) => {
   // checking if user passed in
   console.log(req.user);
   const { chapterId } = req.params;
@@ -90,3 +91,5 @@ exports.getSubtopics = async (req, res) => {
     console.log(err);
   }
 };
+
+module.exports = { getTextbooks, getTextbookById, getChapters, getSubtopics };

@@ -7,7 +7,8 @@ const port = 3001;
 
 const client = require("./configs/database");
 const authRoute = require("./routes/authRoute");
-const courseRoute = require("./routes/courseRoute");
+const contentRoute = require("./routes/contentRoute");
+const progressRoute = require("./routes/progressRoute");
 
 client.connect((err) => {
   if (err) {
@@ -27,7 +28,9 @@ app.get("/", (req, res) => {
 
 app.use("/auth", authRoute);
 
-app.use("/course", courseRoute);
+app.use("/content", contentRoute);
+
+app.use("/progress", progressRoute);
 
 app.listen(port, () => {
   console.log(`App running on ${port}`);

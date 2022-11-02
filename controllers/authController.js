@@ -114,8 +114,6 @@ const login = async (req, res) => {
 };
 
 const getUser = async (req, res) => {
-  // console.log("THIS IS THE USER FROM /USER", req.user);
-  console.log("OBJECT CONVERSION /USE", req.user);
   return res.status(200).json(req.user);
 };
 
