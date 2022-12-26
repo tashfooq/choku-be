@@ -1,9 +1,9 @@
-const bcrypt = require("bcrypt");
-const client = require("../configs/database");
-const jwt = require("jsonwebtoken");
-const { JsonWebTokenError } = require("jsonwebtoken");
+import bcrypt from "bcrypt";
+import { Request, Response } from "express";
+import jwt from "jsonwebtoken";
+import { client } from "../configs/database";
 
-const register = async (req, res) => {
+export const register = async (req: Request, res: Response) => {
   const { firstName, lastName, email, password } = req.body;
   console.log(process.env.JWT_SECRET_KEY);
   try {
@@ -19,8 +19,8 @@ const register = async (req, res) => {
     } else {
       bcrypt.hash(password, 10, (err, hash) => {
         if (err) {
-          return res.status(err).json({
-            error: "Server error.",
+          return res.status(500).json({
+            error: err,
           });
         }
         const user = {
@@ -36,7 +36,7 @@ const register = async (req, res) => {
           }', '${user.lastName}', '${user.email}', '${
             user.password
           }', '${new Date().toLocaleString()}');`,
-          (err) => {
+          (err: string) => {
             if (err) {
               console.log(err);
               return res.status(500).json({
@@ -55,7 +55,7 @@ const register = async (req, res) => {
   }
 };
 
-const login = async (req, res) => {
+export const login = async (req: Request, res: Response) => {
   const { email, password } = req.body;
   try {
     const data = await client.query(`SELECT * FROM users WHERE email= $1;`, [
@@ -67,19 +67,19 @@ const login = async (req, res) => {
         error: "User is not registered, Sign Up first.",
       });
     } else {
-      bcrypt.compare(password, user[0].password, (err, result) => {
+      bcrypt.compare(password, user[0].password, (err, comparisonResult) => {
         //Comparing the hashed password
         if (err) {
           res.status(500).json({
             error: "Server error.",
           });
-        } else if (result === true) {
+        } else if (comparisonResult === true) {
           //Checking if credentials match
 
           const token = jwt.sign(
             {
               id: user[0].id,
-              fistName: user[0].first_name,
+              firstName: user[0].first_name,
               lastName: user[0].last_name,
               email: user[0].email,
             },
@@ -98,7 +98,7 @@ const login = async (req, res) => {
             });
         } else {
           //Declaring the errors
-          if (result !== true)
+          if (comparisonResult === false)
             res.status(400).json({
               error: "Enter correct password!",
             });
@@ -113,8 +113,6 @@ const login = async (req, res) => {
   }
 };
 
-const getUser = async (req, res) => {
+export const getUser = async (req: Request, res: Response) => {
   return res.status(200).json(req.user);
 };
-
-module.exports = { register, login, getUser };

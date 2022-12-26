@@ -1,2 +1,7 @@
-node_modules
+node_modules/
+
+# Docker DB Volume
 db-data/
+
+# TypeScript build
+dist/

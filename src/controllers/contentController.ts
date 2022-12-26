@@ -1,8 +1,7 @@
-const client = require("../configs/database");
+import { Request, Response } from "express";
+import { client } from "../configs/database";
 
-const getTextbooks = async (req, res) => {
-  // checking if user passed in
-  console.log(req.user);
+export const getTextbooks = async (req: Request, res: Response) => {
   try {
     const data = await client.query(`SELECT * FROM textbooks`);
     const textbooks = data.rows;
@@ -23,9 +22,7 @@ const getTextbooks = async (req, res) => {
   }
 };
 
-const getTextbookById = async (req, res) => {
-  // checking if user passed in
-  console.log(req.user);
+export const getTextbookById = async (req: Request, res: Response) => {
   const { textbookId } = req.params;
   try {
     const data = await client.query(
@@ -46,9 +43,7 @@ const getTextbookById = async (req, res) => {
   }
 };
 
-const getChapters = async (req, res) => {
-  // checking if user passed in
-  console.log(req.user);
+export const getChapters = async (req: Request, res: Response) => {
   const { textbookId } = req.params;
   try {
     const data = await client.query(
@@ -69,22 +64,20 @@ const getChapters = async (req, res) => {
   }
 };
 
-const getSubtopics = async (req, res) => {
-  // checking if user passed in
-  console.log(req.user);
+export const getSubchapters = async (req: Request, res: Response) => {
   const { chapterId } = req.params;
   try {
     const data = await client.query(
       `SELECT * FROM subchapter WHERE "chapter_id"='${chapterId}'`
     );
-    const subtopics = data.rows;
-    if (subtopics.length !== 0) {
+    const subchapters = data.rows;
+    if (subchapters.length !== 0) {
       res.status(200).json({
-        subtopics,
+        subchapters: subchapters,
       });
     } else {
       res.status(404).json({
-        error: "Subtopics do not exist for the chapter id.",
+        error: "Subchapters do not exist for the chapter id.",
       });
     }
   } catch (err) {
@@ -92,4 +85,22 @@ const getSubtopics = async (req, res) => {
   }
 };
 
-module.exports = { getTextbooks, getTextbookById, getChapters, getSubtopics };
+export const getSubTopics = async (req: Request, res: Response) => {
+  const { subChapterId } = req.params;
+  try {
+    const data = await client.query(
+      `SELECT * FROM subtopics WHERE "subchapter_id"='${subChapterId}'`
+    );
+    const subtopics = data.rows;
+
+    if (subtopics.length !== 0) {
+      res.status(200).json({
+        subtopics: subtopics,
+      });
+    } else {
+      res.status(404).json({
+        error: "Subtopics do not exist for the chapter id.",
+      });
+    }
+  } catch (err) {}
+};
