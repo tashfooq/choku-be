@@ -14,6 +14,6 @@ contentRoute.use(verifyToken);
 contentRoute.get("/textbooks", getTextbooks);
 contentRoute.get("/textbooks/:textbookId", getTextbookById);
 contentRoute.get("/textbooks/:textbookId/chapters", getChapters);
-contentRoute.get("/subtopic/:chapterId", getSubchapters);
+contentRoute.get("/subchapter/:chapterId", getSubchapters);
 
 export default contentRoute;

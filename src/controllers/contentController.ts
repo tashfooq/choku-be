@@ -1,5 +1,6 @@
 import { Request, Response } from "express";
 import { client } from "../configs/database";
+import { getSubchaptersWithSubtopicCount } from "../services/contentService";
 
 export const getTextbooks = async (req: Request, res: Response) => {
   try {
@@ -64,13 +65,13 @@ export const getChapters = async (req: Request, res: Response) => {
   }
 };
 
-export const getSubchapters = async (req: Request, res: Response) => {
+export const getSubchapters = async (
+  req: Request<{ chapterId: number }>,
+  res: Response
+) => {
   const { chapterId } = req.params;
   try {
-    const data = await client.query(
-      `SELECT * FROM subchapter WHERE "chapter_id"='${chapterId}'`
-    );
-    const subchapters = data.rows;
+    const subchapters = await getSubchaptersWithSubtopicCount(chapterId);
     if (subchapters.length !== 0) {
       res.status(200).json({
         subchapters: subchapters,
