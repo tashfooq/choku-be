@@ -4,20 +4,45 @@ dotenv.config({ path: ".env.test" });
 import createServer from "../utils/server";
 import supertest from "supertest";
 import * as ContentService from "../services/contentService";
-import { SubchaptersWithStCount } from "../types/content";
 import { signJwt } from "../utils/token";
 import { userPayloadStub } from "./stubs/authStubs";
+import { subtopics } from "@prisma/client";
 
 const app = createServer();
 
-const subchaptersWithCount: SubchaptersWithStCount[] = [
-  { id: 1, name: "test1", chapter_id: 1, st_count: 100000 },
+// move these to a stub file
+
+const subchaptersWithCount = [
+  { id: 1, name: "test1", chapterId: 1, _count: { subtopics: 5 } },
+];
+
+const subtopics: subtopics[] = [
+  {
+    id: 1,
+    name: "subtopic with subchapterid 3",
+    subchapterId: 3,
+  },
+  {
+    id: 2,
+    name: "subtopic with subchapterid 3",
+    subchapterId: 3,
+  },
+  {
+    id: 3,
+    name: "subtopic with subchapterid 3",
+    subchapterId: 3,
+  },
+  {
+    id: 4,
+    name: "subtopic with subchapterid 3",
+    subchapterId: 3,
+  },
 ];
 
 describe("content", () => {
-  describe("get getSubchapters route", () => {
+  describe("get subchapters route", () => {
     describe("given the subchapters have subtopics", () => {
-      it("should return object with hasSubtopic", async () => {
+      it("should return object with st_count", async () => {
         const chapterId = 1;
         const jwt = signJwt(userPayloadStub);
         const mockContentService = jest
@@ -28,8 +53,26 @@ describe("content", () => {
           .set("Authorization", `Bearer ${jwt}`);
 
         expect(statusCode).toBe(200);
-        expect(body).toEqual({ subchapters: subchaptersWithCount });
-        expect(mockContentService).toHaveBeenCalledWith(chapterId.toString());
+        expect(body).toEqual(subchaptersWithCount);
+        expect(mockContentService).toHaveBeenCalledWith(chapterId);
+      });
+    });
+  });
+  describe("get subtopics route", () => {
+    describe("given the proper params are used", () => {
+      it("should return array with 4 item", async () => {
+        const subchapterId = 1;
+        const jwt = signJwt(userPayloadStub);
+        const mockContentService = jest
+          .spyOn(ContentService, "getSubtopics")
+          .mockResolvedValueOnce(subtopics);
+        const { statusCode, body } = await supertest(app)
+          .get(`/content/subtopic/${subchapterId}`)
+          .set("Authorization", `Bearer ${jwt}`);
+
+        expect(statusCode).toBe(200);
+        expect(body).toEqual(subtopics);
+        expect(mockContentService).toHaveBeenCalledWith(subchapterId);
       });
     });
   });

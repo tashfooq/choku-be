@@ -1,17 +1,20 @@
 import { Request, Response } from "express";
 import { client } from "../configs/database";
-import { getSubchaptersWithSubtopicCount } from "../services/contentService";
+import {
+  getAllTextbooks,
+  getSubchaptersWithSubtopicCount,
+  getChapters,
+  getSubtopics,
+  getTextbooksById,
+} from "../services/contentService";
 
-export const getTextbooks = async (req: Request, res: Response) => {
+export const getTextbooksHandler = async (req: Request, res: Response) => {
   try {
-    const data = await client.query(`SELECT * FROM textbooks`);
-    const textbooks = data.rows;
+    const textbooks = await getAllTextbooks();
     if (textbooks.length !== 0) {
-      res.status(200).json({
-        textbooks,
-      });
+      res.status(200).json(textbooks);
     } else {
-      res.status(500).json({
+      res.status(404).json({
         error: "No textbooks exist",
       });
     }
@@ -23,14 +26,11 @@ export const getTextbooks = async (req: Request, res: Response) => {
   }
 };
 
-export const getTextbookById = async (req: Request, res: Response) => {
+export const getTextbookByIdHandler = async (req: Request, res: Response) => {
   const { textbookId } = req.params;
   try {
-    const data = await client.query(
-      `SELECT * FROM textbooks WHERE "textbook_id"='${textbookId}'`
-    );
-    const textbook = data.rows;
-    if (textbook.length !== 0) {
+    const textbook = await getTextbooksById(Number(textbookId));
+    if (typeof textbook != "undefined") {
       res.status(200).json({
         textbook,
       });
@@ -41,16 +41,16 @@ export const getTextbookById = async (req: Request, res: Response) => {
     }
   } catch (err) {
     console.log(err);
+    res
+      .status(500)
+      .json({ error: "Database error while retreiving textbooks!" });
   }
 };
 
-export const getChapters = async (req: Request, res: Response) => {
+export const getChaptersHandler = async (req: Request, res: Response) => {
   const { textbookId } = req.params;
   try {
-    const data = await client.query(
-      `SELECT * FROM chapters WHERE "textbook_id"='${textbookId}'`
-    );
-    const chapters = data.rows;
+    const chapters = await getChapters(Number(textbookId));
     if (chapters.length !== 0) {
       res.status(200).json({
         chapters,
@@ -65,17 +65,14 @@ export const getChapters = async (req: Request, res: Response) => {
   }
 };
 
-export const getSubchapters = async (
-  req: Request<{ chapterId: number }>,
-  res: Response
-) => {
+export const getSubchaptersHandler = async (req: Request, res: Response) => {
   const { chapterId } = req.params;
   try {
-    const subchapters = await getSubchaptersWithSubtopicCount(chapterId);
+    const subchapters = await getSubchaptersWithSubtopicCount(
+      Number(chapterId)
+    );
     if (subchapters.length !== 0) {
-      res.status(200).json({
-        subchapters: subchapters,
-      });
+      res.status(200).json(subchapters);
     } else {
       res.status(404).json({
         error: "Subchapters do not exist for the chapter id.",
@@ -86,22 +83,20 @@ export const getSubchapters = async (
   }
 };
 
-export const getSubTopics = async (req: Request, res: Response) => {
-  const { subChapterId } = req.params;
+export const getSubtopicsHandler = async (req: Request, res: Response) => {
+  const { subchapterId } = req.params;
   try {
-    const data = await client.query(
-      `SELECT * FROM subtopics WHERE "subchapter_id"='${subChapterId}'`
-    );
-    const subtopics = data.rows;
-
+    const subtopics = await getSubtopics(Number(subchapterId));
+    console.log(subtopics);
     if (subtopics.length !== 0) {
-      res.status(200).json({
-        subtopics: subtopics,
-      });
+      res.status(200).json(subtopics);
     } else {
       res.status(404).json({
-        error: "Subtopics do not exist for the chapter id.",
+        error: "Subtopics do not exist for the subchapter id.",
       });
     }
-  } catch (err) {}
+  } catch (err) {
+    console.log(err);
+    throw err;
+  }
 };
