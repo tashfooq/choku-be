@@ -4,7 +4,7 @@ import {
   getSubchaptersHandler,
   getSubtopicsHandler,
   getTextbookByIdHandler,
-  getTextbooksHandler,
+  getAllTextbooksHandler,
 } from "../controllers/contentController";
 import verifyToken from "../middleware/authMiddleware";
 const contentRoute = express.Router();
@@ -12,7 +12,7 @@ const contentRoute = express.Router();
 // auth middleware
 contentRoute.use(verifyToken);
 
-contentRoute.get("/textbooks", getTextbooksHandler);
+contentRoute.get("/textbooks", getAllTextbooksHandler);
 contentRoute.get("/textbooks/:textbookId", getTextbookByIdHandler);
 contentRoute.get("/textbooks/:textbookId/chapters", getChaptersHandler);
 contentRoute.get("/subchapter/:chapterId", getSubchaptersHandler);

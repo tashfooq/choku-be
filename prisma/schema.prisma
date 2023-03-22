@@ -16,12 +16,11 @@ model chapters {
 }
 
 model progress {
-  id                  Int   @id(map: "progress_test_pkey") @default(autoincrement())
-  userId              Int   @unique(map: "progress_test_user_id_key") @map("user_id")
-  subchapterProgress  Json? @map("subchapter_progress") @db.Json
-  selectedTextbookIds Int[] @map("selected_textbook_ids")
-  subtopicProgress    Json? @map("subtopic_progress") @db.Json
-  users               users @relation(fields: [userId], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "user_id_fk")
+  id                  Int    @id(map: "progress_pkey") @default(autoincrement())
+  userId              String @unique(map: "progress_user_id_key") @map("user_id")
+  subchapterProgress  Json?  @map("subchapter_progress") @db.Json
+  selectedTextbookIds Int[]  @map("selected_textbook_ids")
+  subtopicProgress    Json?  @map("subtopic_progress") @db.Json
 }
 
 model subchapter {
@@ -45,14 +44,4 @@ model textbooks {
   author   String?
   edition  Int?
   chapters chapters[]
-}
-
-model users {
-  id        Int       @id @default(autoincrement())
-  firstName String?   @map("first_name")
-  lastName  String?   @map("last_name")
-  email     String?   @db.VarChar
-  password  String?   @db.VarChar
-  createdOn DateTime? @map("created_on") @db.Date
-  progress  progress?
 }

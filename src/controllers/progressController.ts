@@ -1,17 +1,22 @@
 import { Request, Response } from "express";
-import { getProgress, setProgress } from "../services/progressService";
+import { internalServerErrorMsg } from "../constants";
+import { getProgress, saveProgress } from "../services/progressService";
 
-export const saveProgress = async (req: Request, res: Response) => {
+export const saveProgressHandler = async (req: Request, res: Response) => {
   const { selectedTextbookIds, subchapterProgress, subtopicProgress } =
     req.body;
   try {
-    const progress = await setProgress(req.user.id, {
+    const progress = await saveProgress({
+      where: {
+        userId: req.auth?.payload.sub,
+      },
       update: {
         selectedTextbookIds,
         subchapterProgress,
         subtopicProgress,
       },
       create: {
+        userId: req.auth?.payload.sub as string,
         selectedTextbookIds,
         subchapterProgress,
         subtopicProgress,
@@ -22,23 +27,24 @@ export const saveProgress = async (req: Request, res: Response) => {
     });
   } catch (err) {
     console.log(err);
+    res.status(500).json({ error: internalServerErrorMsg });
   }
 };
 
-export const fetchProgress = async (req: Request, res: Response) => {
-  console.log("THIS IS THE USER ID:", req.user.id);
+export const getProgressHandler = async (req: Request, res: Response) => {
   try {
-    const progress = await getProgress(req.user.id);
+    const progress = await getProgress(req.auth?.payload.sub as string);
     if (!!progress) {
       res.status(200).json({
         ...progress,
       });
     } else {
       res.status(404).json({
-        error: "Progress does not exist",
+        error: "Progress does not exist for the user id",
       });
     }
   } catch (err) {
     console.log(err);
+    res.status(500).json({ error: internalServerErrorMsg });
   }
 };

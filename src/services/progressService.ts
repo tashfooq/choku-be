@@ -2,13 +2,13 @@ import { Prisma, PrismaClient } from "@prisma/client";
 
 const prisma = new PrismaClient();
 
-export const setProgress = async (
-  userId: number,
-  progy: Prisma.progressUpsertWithoutUsersInput
+export const saveProgress = async (
+  // userId: string,
+  progy: Prisma.progressUpsertArgs
 ) => {
   const data = await prisma.progress.upsert({
     where: {
-      userId,
+      userId: progy.where.userId,
     },
     update: {
       subchapterProgress: progy.update.subchapterProgress,
@@ -16,7 +16,7 @@ export const setProgress = async (
       selectedTextbookIds: progy.update.selectedTextbookIds,
     },
     create: {
-      userId,
+      userId: progy.create.userId,
       subchapterProgress: progy.create.subchapterProgress,
       subtopicProgress: progy.create.subtopicProgress,
       selectedTextbookIds: progy.create.selectedTextbookIds,
@@ -25,7 +25,7 @@ export const setProgress = async (
   return data;
 };
 
-export const getProgress = async (userId: number) => {
+export const getProgress = async (userId: string) => {
   const data = await prisma.progress.findFirst({
     where: { userId },
   });
