@@ -69,7 +69,8 @@ export const getSubchaptersHandler = async (req: Request, res: Response) => {
       Number(chapterId)
     );
     if (subchapters.length !== 0) {
-      res.status(200).json(subchapters);
+      console.log({ subchapters });
+      res.status(200).json({ subchapters });
     } else {
       res.status(404).json({
         error: "Subchapters do not exist for the chapter id",
