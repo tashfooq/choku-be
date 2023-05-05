@@ -1,0 +1,697 @@
+name,subchapter_id
+Enzymes,81
+Enzyme Inhibtors,81
+Dose-Response,81
+Drug Elimination,81
+Pharmokinetics,81
+Ethic Principles,82
+Informed Consent,82
+Confidentiality,82
+Decision-Making Capacity,82
+Public Health,82
+Quality and Safety,82
+The Healthy Patient,82
+Geriatrics,82
+Pediatrics,82
+Pyrimidine Metabolism,83
+DNA Structure,83
+Purine Metabolism,83
+Glucose,84
+Glycolysis,84
+Gluconeogenesis,84
+Glycogen,84
+HMP Shunt,84
+Fructose and Galactose,84
+Pyruvate Dehydrogenase,84
+TCA Cycle,84
+Electron Transport Chain,84
+Fatty Acids,84
+Ketone Bodies,84
+Ethanol Metabolism,84
+Exercise and Starvation,84
+Inborn Errors of Metabolism,84
+Amino Acids,85
+Phenylalanine,85
+Other Amino Acids,85
+Ammonia,85
+B Vitamins,86
+B12 and Folate,86
+Other Vitamins,86
+Lipid Metabolism,87
+Hyperlipidemia,87
+Lipid Drugs,87
+Lysosomal Storage Diseases,88
+Basic Statistics,89
+Hypothesis Testing,89
+Tests of Significance,89
+Correlations,89
+Study Designs,90
+Risk Quantification,90
+Sensitivity and Specificity,90
+Positive and Negative Predictive Value,90
+Diagnostic Tests,90
+Bias,90
+Clinical Trial,90
+Evidence-Based Medicine,90
+Cardiac Anatomy,91
+Cadiac Physiology,91
+CV Response to Exercise,91
+Blood Flow Mechanics,91
+Regulation of Blood Pressure,91
+PV Loops,91
+Wiggers' Diagram,91
+Venous Pressure Tracings,91
+Starling Curve,91
+Atherosclerosis,92
+Cardiac Ischemia,92
+STEMI,92
+Unstable Angina/NSTEMI,92
+Stable Angina,92
+EKG Basics,93
+High Yield EKGs,93
+Cardiac Action Potentials,94
+AV and Bundle Branch Blocks,94
+Atrial Fibrillation and Flutter,94
+AVNRT,94
+WPW,94
+Antiarrhythmic Drugs,94
+Heart Murmurs,95
+Heart Sounds,95
+Heart Failure Basics,96
+Systolic and Diastolic Heart Failure,96
+Restrictive Cardiomyopathy,96
+Acute Heart Failure,96
+Chronic Heart Failure,96
+Cardiac Embryology,97
+Shunts,97
+Cyanotic Congenital Heart Disease,97
+Coarctation of the Aorta,97
+Hypertension ,98
+Secondary Hypertension,98
+Hypertension Drugs,98
+Valve Disease,99
+Shock,99
+Pericardial Disease,99
+Aortic Dissection,99
+Cardiac Tumors,99
+Hypertrophic Cardiomyopathy,99
+Endocarditis,99
+DNA Replication,100
+DNA Mutations,100
+DNA Repair,100
+Transcription,100
+Translation,100
+PCR,101
+Blotting,101
+Flow Cytometry,101
+ELISA,101
+Microarrays and FISH,101
+Cell Cycle,102
+Cell Structure,102
+Cytoskeleton,102
+Connective Tissue,102
+Skin,103
+Epithelial Cells,103
+Skin Disorders I,103
+Skin Disorders II,103
+Pigment Disorders,103
+Vascular Lesion,103
+Skin Infections,103
+Blistering Disorders,103
+Hypersensitivity Disorders,103
+Skin Cancer,103
+Neurocutaneous Disorders,103
+Thyroid Gland,104
+Thyroid Disorders,104
+Thyroid Cancer,104
+Adrenal Glands,105
+Congenital Adrenal Hyperplasia,105
+Adrenal Disorders,105
+Endocrine Pancreas,106
+Diabetes,106
+Insulin,106
+Treatment of Diabetes,106
+Reproductive Hormones ,107
+Male Reproductive Hormones,107
+Female Reproductive Hormones,107
+Menstrual Cycle,107
+Pituitary Gland,108
+Parathyroid Glands,108
+MEN Syndromes,108
+Signaling Pathways,108
+Gastrointestinal Embryology,109
+Gastrointestinal Anatomy,109
+Gastrointestinal Blood Supply,109
+Gastrointestinal Tract,109
+"Liver, Gallbladder, and Pancreas",109
+Salivary Gland,109
+Hernias,109
+Bile,110
+Bilirubin,110
+Gastrointestinal Secretions,110
+Gastrointestinal Hormones,110
+Exocrine Pancreas,110
+Esophageal Disorders,111
+Liver Disease,111
+Cirrhosis,111
+Liver Tumors,111
+Wilson's Disease and Hemochromatosis,111
+Gallstones,111
+Biliary Disorders,111
+Gastric Disorders,111
+Malabsorption,111
+Acute Pancreatitis,111
+Chronic Pancreatitis & Pancreatic Cancer,111
+Instetinal Disorders,111
+Inflammatory Bowel Disease,111
+Colon Cancer,111
+Carcinoid Tumors,111
+Gastrointestinal Pharmacology,111
+Genetic Principles,112
+Gene Mapping,112
+Meiosis,112
+Hardy-Weinberg Law,112
+Pedigrees,112
+Imprinting,112
+Down Syndrome,113
+Trisomies,113
+Muscular Dystrophy,113
+Trinucleotide Repeat Disorders,113
+Deletion Syndromes,113
+Turner and Klinefelter Syndromes,113
+Coagulation,114
+Platelet Activation,114
+Hypercoagulable States,114
+Coagulopathies,114
+Platelet Disorders,114
+Antiplatelet Drugs,114
+Anticoagulants,114
+Hemolysis Basics,115
+Extrinsic Hemolysis,115
+Intrinsic Hemolysis,115
+Microcytic Anemias,115
+Thalassemias,115
+Sickle Cell Anemia,115
+Other Anemias,115
+Blood Groups,115
+Acute Leukemia,116
+Chronic Leukemia,116
+Hodgkin Lymphoma,116
+Non-Hodgkin Lymphoma,116
+Plasma Cell Disorders,116
+Amyloidosis,116
+Myeloproliferative Disorders,116
+Virus Structures,128
+DNA Viruses,128
+Herpes Viruses,128
+RNA Viruses,128
+Viral Hepatitis,128
+HIV,128
+HIV Drugs,128
+Antimetabolites,117
+Alkylating Agents,117
+Antitumor Antibiotics,117
+Microtubule Inhibitors,117
+DNA Drugs,117
+Other Cancer Drugs,117
+Porphyrias,118
+Innate Immunity,119
+T-cells,119
+B-cells,119
+The Complement System,119
+Lymph Nodes and Spleen,119
+Hypersensitivity,120
+Transplants,120
+Immune Deficiency Syndromes,120
+Glucocorticoids and NSAIDS,121
+Immunosuppressive Drugs,121
+Systemic Lupus Erythematosus,122
+Rheumatoid Arthritis,122
+Scleroderma,122
+Sjogren's Syndrome,122
+Vasculitis,122
+Bacteria,123
+Shapes and Stains,123
+Bacterial Culture,123
+Special Growth Requirements,123
+Virulence,123
+Growth and Genetics,123
+Bacterial Identification,123
+Staphylococci,124
+Streptococci,124
+Other Gram Positives,124
+Other Gram Negatives,124
+Spirochetes,124
+Zoonotic Infections,124
+Mycobacteria,124
+Penicillins,125
+Beta Lactams,125
+Sulfonamides,125
+Protein Synthesis Inhibitors,125
+Other Antibiotics,125
+Fungal Pneumonias,126
+Fungal Skin Infections,126
+Opportunistic Fungal Infections,126
+Antifungal Drugs,126
+Malaria,127
+Protozoa,127
+Helminths,127
+Antiviral Drugs,128
+Knee,129
+Shoulder and Elbow,129
+Brachial Plexus,129
+Wrist,129
+Hand,129
+Lumbosacral Plexus,129
+Lumbar Radiculopathy,129
+Hip,129
+Skeletal Muscle,130
+Cardiac Muscle,130
+Smooth Muscle,130
+Bone,130
+Bone Disorders,131
+Osteoporosis,131
+Osteoporosis Drugs,131
+Bone Tumors,131
+Osteoarthritis,131
+Gout,131
+Gout Drugs,131
+CPPD,131
+Seronegative Spondyloarthritis,131
+Muscle Disorders,131
+Neuromuscular Disorders,131
+Cells of the Nervous System,132
+Nerve Damage,132
+Blood Brain Barrier,132
+Neurotransmitters,132
+Dermatomes and Reflexes,132
+Cerebral Cortex,133
+Spinal Cord,133
+Spinal Cord Syndromes,133
+Brainstem,133
+Cranial Nerves,133
+Auditory System,133
+Vestibular System,133
+"Thalamus, Hypothalamus, Limbic System",133
+Cerebellum,133
+Basal Ganglia,133
+Ventricles and Sinuses,133
+Cerebral and Lacunar Strokes,134
+Vertebrobasilar Stroke Syndromes,134
+CNS Aneurysms,134
+Intracranial Bleeding,134
+Management of TIA/ Stroke,134
+Autonomic Nervous System,135
+ANS Drugs: Norepinephrine,135
+ANS Drugs: Acetylcholine,135
+Autonomic Receptors,135
+The Pupil,136
+The Lens,136
+The Retina,136
+Eye Movements,136
+Visual Fields,136
+Gaze Palsies,136
+Structural Eye Disorders,136
+Glaucoma,136
+General Anasthesia,137
+Local Anesthesia,137
+Neuromuscular Blockers,137
+Meningitis,138
+Seizures,138
+Neuroembryology,138
+Delirium and Dementia,138
+Demyelinating Disease,138
+Headaches,138
+Brain Tumors,138
+"Parinson's, Huntington's, and Movement Disorders",138
+HIV CNS Infections,138
+Cellular Adaptations,139
+Cell Injury,139
+Free Radicals,139
+Apoptosis,139
+Necrosis,139
+Inflammation Principles,139
+Acute and Chronic Inflammation,139
+Granulomatous Inflammation,139
+Wound Healing and Scar,139
+Pathologic Calcifications,139
+Neoplasia,139
+Conditioning and Transference,140
+Ego Defenses,140
+Child Abuse and Neglect,141
+Childhood Disorders,141
+ADHD Autism,141
+Cognitive Disorders,141
+Psychosis,141
+Psychotic Disorders,141
+Dissociative Disorders,141
+Somatic and Factitious Disorders,141
+Personality Disorders,141
+Mood Disorders,141
+Anxiety Disorders,141
+Eating Disorders,141
+Sleep Disorders,141
+Alcohol and CNS Depressants,142
+Opoids,142
+Stimulants,142
+Other Drugs,142
+Pulmonary Embryology,144
+Pulmonary Anatomy,144
+Pulmonary Physiology,144
+Hemoglobin,144
+Pulmonary Circulation,144
+Hypoxia,144
+Ventilation and Perfusion,144
+Carbon Dioxide,144
+Pulmonary Physical Exam,144
+Antipsychotics,143
+Lithium,143
+Antidepressants,143
+Pulmonary Function Tests,145
+Obstructive Lung Disease,145
+Restrictive Lung Disease,145
+Treatment of COPD and Asthma,145
+Pneumonia,146
+Pleural Disease,146
+Lung Cancer,146
+Sleep Apnea,146
+Cystic Fibrosis,146
+Tuberculosis,146
+Sarcoidosis,146
+Pulmonary Embolism,146
+Chest X-rays,146
+Renal Embryology,147
+Renal Anatomy,147
+Renal Physiology I,147
+Renal Physiology II,147
+Nephron Physiology,147
+Renal Endocrine Function,147
+Acid Excretion,148
+Acid-Base Principles,148
+Respiratory Disorders,148
+Metabolic Alkalosis,148
+Renal Tubular Acidosis,148
+Meabolic Acidosis,148
+Acid Base Problems,148
+Electrolyte Disorders,149
+Sodium and Water Balances,149
+Sodium Disorders,149
+Glomerulonephritis Principles,150
+Nephritic Syndrome,150
+Nephrotic Syndrome,150
+MPGN,150
+Tubulointerstitial Disease,150
+Renal Failure,150
+Urinary Tract Infections,151
+Cystic Kidney Disase,151
+Diuretics,151
+Kidney Stones,151
+Renal and Bladder Tumors,151
+Rhabdomyolysis,151
+Embryonic Genes,152
+Embryogenesis,152
+Germ Layers,152
+Errors in Morphogenesis,152
+Teratogens I,152
+Teratogens II,152
+Pharyngeal Arches,152
+Cleft Lip and Palate,152
+Pharyngeal Pouches and Clefts,152
+Genital Embryology,152
+Spermatogenesis and Oogenesis,153
+Placenta,153
+Twins,153
+Pregnancy,153
+Maternal-Fetal Disorders,153
+Hypertension in Pregnancy,153
+Placental Complications,153
+Gestational Tumors,153
+TORCH Infections,153
+Vaginal Cancer,154
+Cervical Cancer,154
+Endometrial Disorders,154
+Endometriosis,154
+Endometrial Cancer,154
+Ovarian Cysts,155
+Ovarian Epithelial Tumors,155
+Ovarian Stromal Tumors,155
+Ovarian Germ Cell Tumors,155
+Breast Tissue,156
+Breast Disorders,156
+Breast Carcinoma,156
+Penile Disorders,157
+Scrotal Disorders,157
+Testicular Cancer,157
+Prostate,157
+Disorders of Sexual Development,158
+Hypogonadism,158
+Cholinomimetics,280
+Acetylcholinestrase Inhibitors,280
+Muscarinic Antagonists,280
+Sympathomimetics,281
+Indirect Sympathomimetics,281
+Alpha Drugs,281
+Beta Blockers,281
+Acetylcholinesterase Inhibitors [Old Version],282
+Digoxin,283
+"ACE inhibitors, ARBs, Aliskiren",283
+"Sacubitril-Valsartan, Milrinone, Nesiritide, Ivabradine",283
+"Acetazolamide, Mannitol",284
+Loop Diuretics,284
+Thiazides,284
+K+ Sparing Diuretics,284
+Calcium Channel Blockers,285
+Class I A-C Antiarrythmics,286
+Class II Antiarrythmics,286
+Class III Antiarrythmics,286
+Class IV Antiarrythmics,286
+Class V Antiarrythmics,286
+Primary Hypertension and Hypertensive Emergency,285
+"Hepain, LMWH, Fondaparinux, Direct Thrombin Inhibitors, Xa Inhibitors",287
+Warfarin,287
+Antiplatelet Agents,287
+Thrombolytics,287
+Statins,288
+"Cholestyramine, Ezetimibe",288
+"Fibrates, Niacin",288
+PCSK9 Inhibitors,288
+"Valproate, Topiramate, Lamotrigine, Levitiracetam",305
+Gout Drugs,289
+NSAIDS,289
+Nitrates,290
+Triptans & Migraine,290
+"Prostaglandins, Prostacyclin, Bosentan, PDE5 Inhibitors",290
+Antihistamines,291
+Asthma Therapy,291
+Antiemetic Agents,292
+"H2 Receptor Blockers, PPIs",292
+Laxatives,292
+Antidiarrheals,292
+"Insulin, Sulfonylureas, Meglitinides, GLP-1 Agonists, DPP-4 Inhibitors",293
+"Metformin, Thiazolidinediones, Pramlintide, SGLT2 Inhibitors",293
+"Propylthiouracil, Methimazole, Levothyroxine",294
+"Bisphosphonates, Raloxifene, Denosumab, Calcitonin",294
+"Teriparatide, Vitamin D, Cinacalcet, Sevelamer",294
+Glucocorticoids,294
+"Growth Hormone, Mecasermin, Octreotide, Pegvisomant",295
+"ADH, DDAVP, ADH Receptor Antagonists",295
+SERMs & Aromatase Inhibitors,296
+Antiemetic Agents,297
+Laxatives and Antidiarrheal Agents,297
+IV Anesthetics,298
+"Inhaled Anesthetics, Dantrolene",298
+"Opiates, Naloxone, Naltrexone",298
+"SSRIs, SNRIs, Cyproheptadine",299
+Tricyclic Antidepressants,299
+MAO Inhibitors,299
+"Bupropion, Mirtazapine, Trazadone",299
+Lithium,300
+Broad Spectrum Anti-Epileptics,300
+Ethosiximide,300
+"Carbamazepine, Oxcarbazepine, Phenytoin, Tiagabine,Vigabatrin",300
+"Gabapentin, Pregabalin",300
+First Generation Antipsychotics,301
+Second Generation Antipsychotics,301
+Parkinsnism Drugs,301
+Narcolepsy Drugs,302
+"Amphetamine, Dexamphetamine, Lisdexamfetamine & Methylphenidate",302
+"Benzodiazepines, Flumazenil",303
+"Nonbenzodiazepine Hypnotics, Melatonin, Ramelteon",303
+Barbiturates,303
+Varenicline,304
+Penicillin,306
+"Nafcillin, Oxacillin, Methicillin & Dicloxacillin",306
+"Ampicillin, Amoxicillin, Piperacillin, Ticarcillin",306
+Cephalosporins,306
+Monobactams & Carbapenems,306
+Vancomycin,306
+Daptomycin,306
+Aminoglycosides,307
+Tetracyclines,307
+Macrolides,307
+Clindamycin,307
+Chloramphenicol,307
+Linezolid,307
+Metronidazole,309
+Fluoroquinolones,309
+Leprosy Drugs,308
+Tuberculosis Drugs,308
+Trimethoprim/Sulfamethoxazole,309
+"Amphotericin, flucytosine",310
+Azoles,310
+"Griseofulvin, Terbinafine, Echinocandins",310
+NNRTIs,311
+Protease Inhibitors,311
+NRTIs,311
+"Maraviroc, fusion inhibitors, integrase inhibitors",311
+"Acyclovir, valacyclovir, famaciclovir",312
+Hepatitis C: Direct-acting antivirals (DAAs),312
+"Ganciclovir, valganciclovir, foscarnet, cidofovir",312
+Daptomycin [Old Version],313
+Macrolides [Old Version],313
+Cytotoxic Nucleoside Analogs,314
+Alkylating Agents,315
+Platins,315
+Cytotoxic Antibiotics,315
+Topoisomerase Inhibitors,315
+Mitotic Inhibitors,315
+"Methotrexate, Leucovorin, 5- Fluorouracil, Hydroxyurea",314
+"Azathioprine, 6-mercaptopurine, Mycophenolate Mofetil",314
+Kinase Inhibitors,316
+Monoclonal Antibody Therapy,316
+Interferons,317
+"Membranes: Partition Coefficient, Passive Diffusion & Active Transport",318
+Plasma Concentration & Therapeutic Range,318
+Oral Drug Absorption & Bioavailability,319
+Introduction to Drug Absorption via Parenteral Routes,319
+Drug Distribution & Protein Binding,320
+Volume of Distribution,320
+P-Glycoprotein & Enterohepatic Recycling,321
+Introduction to CYP450 Enzymes,321
+Clearance & Area Under The Curve,322
+"Elimination-Rate Constant, Half Life & Steady State",322
+"Agonists, Antagonists & Allosteric Modulators",323
+Introduction to Pharmacodynamics & Pharmacokinetic Drug Interactions,324
+Staphlococcus Aureus,325
+Bacillus Anthracis & Cereus,326
+Clostridium Tetani,326
+Clostridium Botulinum,326
+Clostridium Perfringens,326
+Clostridium Difficile,326
+Corynebacterium Diptheriae,326
+Listeria Monocytogenes,326
+Enterococcus Faecium & Faecalis,325
+Streptococcus Pneumoniae & Viridans,325
+Streptococcus Agalactiae (Group B Strep),325
+Streptococcus Pyogenes (Group A Strep),325
+Staphylococcus Epidermidis & Saprophyticus,325
+Actinomyces Isrealii,327
+Nocardia Asteroides,327
+Neisseria: Overview,328
+Neirsseria Meningitidis,328
+Neisseria Gonorrhoeae,328
+Shigella spp.,329
+"Klebsiella pneumoniae, Enterobacter spp., Serratia Marcescens",329
+Salmonella Part 1: Introduction to Salmonella & NTS,329
+Salmonella Part 2: Typhoidal Salmonella,329
+"Escherichia coli (ETEC, EHEC)",329
+Yersinia Enterocolitica & Pestis,329
+Campylobacter Jejuni ,329
+Vibrio spp.,329
+Helicobacter Pylori,329
+Proteus mirabilis,329
+Bordetella Pertussis,330
+Haemophilus Influenzae,330
+Legionella Pneumophila,330
+Pseudomonas Aeruginosa,330
+Bartonella Henselae,331
+Brucella spp.,331
+Francisella Tularensis ,331
+Pasteurella Multocida ,331
+Mycobacterium Tuberculosis,332
+Mycobacterium Leprae ,332
+Borrelia Burgdorferi,333
+Leptospira Interrogans,333
+Treponema Pallidum,333
+"Chlamydia Trachomatis, Chlamydophila Pneumoniae & Chlamydophila Psittaci",334
+Coxiella Burnetii,334
+Gardnerella Vaginalis,334
+Mycoplasma Pneumoniae,334
+Rickettsia Overview,334
+Rickettsia Prowazekii,334
+Rickettsia Rickettsii,334
+Clostridium Difficile [Old Version],335
+Neisseria Overview [Old version],335
+Neisseria Meningitidis [Old version],335
+Neisseria Gonorrhoeae [Old version],335
+Vibrio spp. [Old version],335
+Histoplasma Capsulatum,336
+Blastomyces Dermatitidis,336
+Coccidioides Immitis,336
+Paracoccidioides Brasiliensis,336
+Malassezia Furfur,337
+"Epidermophyton spp., Trichophyton spp., Microsporum spp. (dermatophytes)",337
+Sporothrix Schenckii ,337
+Candida Albicans,338
+Aspergillus Fumigatus,338
+Cryptococcus Neoformans,338
+"Mucor spp., Rhizopus spp. (Mucormycetes)",338
+Pneumocystis Jirovecii,338
+ Picornaviridae Overview,339
+Poliovirus (Picornaviridae),339
+Coxsackievirus A & B (Picornaviridae),339
+Rhinovirus (Picornaviridae),339
+Hepatitis A virus (Picornaviridae),339
+Norovirus/Norwalk Virus (Caliciviridae),339
+Flaviviridae Overview,339
+Hepatitis C Introduction & Viral Basics: Hepatitis C Part 1,339
+Hepatitis C Viral Life Cycle: Hepatitis Part 2,339
+ Coronavirus (Coronaviridae),339
+"Eastern/Western/Venezuelan equine encephalitis virus, Chikungunya virus (Togaviridae)",339
+Rubella virus (Matonaviridae),339
+HIV Overview (Retroviridae): HIV Part 1,339
+HIV Life Cycle (Retroviridae): HIV Part 2,339
+Influenzavirus (Orthomyxoviridae),340
+"Measles virus, Mumps virus, Parainfluenza virus (Paramyxoviridae)",340
+Respiratory Syncytial Virus and Human Metapneumovirus (Pnuemoviridae),340
+Rabies virus (Rhabdoviridae),340
+"Ebolavirus, Marburgvirus (Filoviridae)",340
+"Hantavirus, California encephalitis virus, Rift Valley fever virus (Bunyaviridae)",340
+Lymphocytic choriomeningitis virus (Arenaviridae),340
+"Rotavirus, Colorado tick fever virus (Reoviridae)",340
+Herpes simplex virus type 1 & 2 (Herpesviridae),341
+Epstein–Barr virus (Herpesviridae) ,341
+Cytomegalovirus (Herpesviridae),341
+Varicella-zoster virus (Herpesviridae),341
+" HHV-6, roseola (Herpesviridae) ",341
+"HHV-8, Kaposi's sarcoma (Herpesviridae) ",341
+"JC polyomavirus, BK polyomavirus (Polyomaviridae) ",341
+Human papillomavirus (Papillomaviridae),341
+Parvovirus B19 (Parvoviridae),341
+Adenovirus (Adenoviridae),341
+"Smallpox virus, Cowpox virus, Molluscum contagiosum virus (Poxviridae)",341
+Hepatitis B Viral Basics & Infectious Diseases: Hepatitis B Part 1 (Hepadnaviridae),341
+Hepatitis B Viral Life Cycle: Hepatitis B Part 2 (Hepadnaviridae),341
+Hepatitis A virus (Picornaviridae) [Old Version],342
+Hepatitis B virus (Hepadnaviridae) [Old Version],342
+Hepatitis C virus (Flaviviridae) [Old Version],342
+Coronavirus (Coronaviridae) [Old Version],342
+Rabies virus (Rhabdoviridae) [Old Version],342
+Giardia Lamblia,343
+Entamoeba Histolytica,343
+Cryptosporidium spp. ,343
+Toxoplasma Gondii,344
+Trypanosoma Brucei,344
+Naegleria Fowleri,344
+Trypanosoma Cruzi,345
+Babesia spp.,345
+Plasmodium Part 1,345
+Plasmodium Part 2: Treatment and PPX,345
+Leishmania Braziliensis & Donovani ,345
+Trichomonas Vaginalis,346
+"Enterobius vermicularis, Ancylostoma duodenale, Necator americanus, Ascaris lumbricoides, Strongyloides stercoralis, Trichinella spiralis (intestinal nematodes) ",347
+"Dracunculus medinensis, Wuchereria bancrofti, Onchocerca volvulus, Toxocara canis, Loa loa (tissue nematodes)",347
+Cestodes,348
+Trematodes,348
+Trypanosoma cruzi [Old version] ,349
+Trichomonas Vaginalis [Old Version],349

@@ -1,0 +1,47 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model chapters {
+  id          Int           @id @default(autoincrement())
+  textbookId  Int           @map("textbook_id")
+  name        String        @db.VarChar(255)
+  textbooks   textbooks     @relation(fields: [textbookId], references: [id], onDelete: Cascade, map: "textbook_id_fk")
+  subchapters subchapters[]
+}
+
+model progress {
+  id                  Int    @id @default(autoincrement())
+  userId              String @map("user_id")
+  subchapterProgress  Int[]  @map("subchapter_progress")
+  selectedTextbookIds Int[]  @map("selected_textbook_ids")
+  subtopicProgress    Int[]  @map("subtopic_progress")
+}
+
+model subtopics {
+  id           Int         @id @default(autoincrement())
+  subchapterId Int         @map("subchapter_id")
+  name         String      @db.VarChar(255)
+  subchapter   subchapters @relation(fields: [subchapterId], references: [id], onDelete: Cascade, map: "subchapter_id_fk")
+}
+
+model textbooks {
+  id       Int        @id @default(autoincrement())
+  name     String     @db.VarChar(255)
+  author   String?    @db.VarChar(255)
+  edition  String?    @db.VarChar(255)
+  chapters chapters[]
+}
+
+model subchapters {
+  id        Int         @id @default(autoincrement())
+  chapterId Int         @map("chapter_id")
+  name      String      @db.VarChar(255)
+  chapters  chapters    @relation(fields: [chapterId], references: [id], onDelete: Cascade, map: "chapter_id_fk")
+  subtopics subtopics[]
+}
