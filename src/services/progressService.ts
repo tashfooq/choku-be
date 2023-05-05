@@ -6,23 +6,24 @@ export const saveProgress = async (
   // userId: string,
   progy: Prisma.progressUpsertArgs
 ) => {
-  const data = await prisma.progress.upsert({
-    where: {
-      userId: progy.where.userId,
-    },
-    update: {
-      subchapterProgress: progy.update.subchapterProgress,
-      subtopicProgress: progy.update.subtopicProgress,
-      selectedTextbookIds: progy.update.selectedTextbookIds,
-    },
-    create: {
-      userId: progy.create.userId,
-      subchapterProgress: progy.create.subchapterProgress,
-      subtopicProgress: progy.create.subtopicProgress,
-      selectedTextbookIds: progy.create.selectedTextbookIds,
-    },
-  });
-  return data;
+  return null;
+  // const data = await prisma.progress.upsert({
+  //   where: {
+  //     userId: progy.where.userId,
+  //   },
+  //   update: {
+  //     subchapterProgress: progy.update.subchapterProgress,
+  //     subtopicProgress: progy.update.subtopicProgress,
+  //     selectedTextbookIds: progy.update.selectedTextbookIds,
+  //   },
+  //   create: {
+  //     userId: progy.create.userId,
+  //     subchapterProgress: progy.create.subchapterProgress,
+  //     subtopicProgress: progy.create.subtopicProgress,
+  //     selectedTextbookIds: progy.create.selectedTextbookIds,
+  //   },
+  // });
+  // return data;
 };
 
 export const getProgress = async (userId: string) => {

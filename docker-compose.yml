@@ -8,6 +8,9 @@ services:
     environment:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: mypass
-      POSTGRES_DB: base_db
+      POSTGRES_DB: choku
     volumes:
       - ./db-data/:/var/lib/postgresql/data/
+      - ./choku-data/:/choku-data/
+      - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
+      - ./sql/populate-tables.sql:/docker-entrypoint-initdb.d/populate-tables.sql

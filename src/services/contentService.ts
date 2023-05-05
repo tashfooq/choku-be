@@ -1,6 +1,6 @@
 import {
   PrismaClient,
-  subchapter,
+  subchapters,
   subtopics,
   textbooks,
   chapters,
@@ -35,8 +35,8 @@ export const getChapters = async (textbookId: number): Promise<chapters[]> => {
 
 export const getSubchaptersWithSubtopicCount = async (
   chapterId: number
-): Promise<subchapter[]> => {
-  const data = await prisma.subchapter.findMany({
+): Promise<subchapters[]> => {
+  const data = await prisma.subchapters.findMany({
     where: {
       chapterId,
     },

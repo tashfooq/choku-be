@@ -1,6 +1,5 @@
 import express from "express";
 import cors from "cors";
-import authRoute from "../routes/authRoute";
 import contentRoute from "../routes/contentRoute";
 import progressRoute from "../routes/progressRoute";
 
@@ -15,8 +14,6 @@ const createServer = () => {
   app.get("/", (req, res) => {
     res.status(200).send("This Worked!");
   });
-
-  app.use("/auth", authRoute);
 
   app.use("/content", contentRoute);
 
