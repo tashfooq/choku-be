@@ -17,9 +17,10 @@ model chapters {
 
 model progress {
   id                  Int    @id @default(autoincrement())
-  userId              String @map("user_id")
-  subchapterProgress  Int[]  @map("subchapter_progress")
+  userId              String @unique(map: "unique_user_id") @map("user_id")
   selectedTextbookIds Int[]  @map("selected_textbook_ids")
+  chapterProgress     Int[]  @map("chapter_progress")
+  subchapterProgress  Int[]  @map("subchapter_progress")
   subtopicProgress    Int[]  @map("subtopic_progress")
 }
 

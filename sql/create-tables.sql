@@ -33,8 +33,10 @@ create table if not exists subtopics (
 create table if not exists progress (
   id serial NOT NULL,
   user_id text NOT NULL,
-  subchapter_progress int[],
   selected_textbook_ids int[],
+  chapter_progress int[],
+  subchapter_progress int[],
   subtopic_progress int[],
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  CONSTRAINT unique_user_id UNIQUE (user_id)
 );
