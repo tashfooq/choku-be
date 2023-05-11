@@ -88,7 +88,7 @@ export const getSubtopicsHandler = async (req: Request, res: Response) => {
     const subtopics = await getSubtopics(Number(subchapterId));
     console.log(subtopics);
     if (subtopics.length !== 0) {
-      res.status(200).json(subtopics);
+      res.status(200).json({ subtopics });
     } else {
       res.status(404).json({
         error: "Subtopics do not exist for the subchapter id",
