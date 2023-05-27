@@ -61,3 +61,42 @@ export const getSubtopics = async (
   });
   return data;
 };
+
+export const getChaptersByIds = async (
+  chapterIds: number[]
+): Promise<chapters[]> => {
+  const data = await prisma.chapters.findMany({
+    where: {
+      id: {
+        in: chapterIds,
+      },
+    },
+  });
+  return data;
+};
+
+export const getSubchaptersByIds = async (
+  subchapterIds: number[]
+): Promise<subchapters[]> => {
+  const data = await prisma.subchapters.findMany({
+    where: {
+      id: {
+        in: subchapterIds,
+      },
+    },
+  });
+  return data;
+};
+
+export const getSubtopicsByIds = async (
+  subtopicIds: number[]
+): Promise<subtopics[]> => {
+  const data = await prisma.subtopics.findMany({
+    where: {
+      id: {
+        in: subtopicIds,
+      },
+    },
+  });
+  return data;
+};

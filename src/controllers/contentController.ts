@@ -6,7 +6,15 @@ import {
   getChapters,
   getSubtopics,
   getTextbooksById,
+  getChaptersByIds,
+  getSubchaptersByIds,
+  getSubtopicsByIds,
 } from "../services/contentService";
+import { text } from "stream/consumers";
+
+interface MultipleIdQueryParams {
+  ids: string[];
+}
 
 export const getAllTextbooksHandler = async (req: Request, res: Response) => {
   try {
@@ -62,6 +70,25 @@ export const getChaptersHandler = async (req: Request, res: Response) => {
   }
 };
 
+export const getChaptersByIdsHanbler = async (
+  req: Request<{}, {}, {}, MultipleIdQueryParams>,
+  res: Response
+) => {
+  const { ids } = req.query;
+  if (ids === undefined || ids.length === 0) {
+    res.status(200).json({ chapters: [] });
+    return;
+  }
+  try {
+    let parsedIds = ids.map((id) => Number(id));
+    const chapters = await getChaptersByIds(parsedIds);
+    console.log(chapters);
+    res.status(200).json({ chapters });
+  } catch (err) {
+    console.log(err);
+  }
+};
+
 export const getSubchaptersHandler = async (req: Request, res: Response) => {
   const { chapterId } = req.params;
   try {
@@ -82,13 +109,32 @@ export const getSubchaptersHandler = async (req: Request, res: Response) => {
   }
 };
 
+export const getSubchaptersByIdsHanbler = async (
+  req: Request<{}, {}, {}, MultipleIdQueryParams>,
+  res: Response
+) => {
+  const { ids } = req.query;
+  if (ids === undefined || ids.length === 0) {
+    res.status(200).json({ chapters: [] });
+    return;
+  }
+  try {
+    let parsedIds = ids.map((id) => Number(id));
+    const subchapters = await getSubchaptersByIds(parsedIds);
+    res.status(200).json({ subchapters });
+  } catch (err) {
+    console.log(err);
+  }
+  return ids;
+};
+
 export const getSubtopicsHandler = async (req: Request, res: Response) => {
   const { subchapterId } = req.params;
   try {
     const subtopics = await getSubtopics(Number(subchapterId));
     console.log(subtopics);
     if (subtopics.length !== 0) {
-      res.status(200).json(subtopics);
+      res.status(200).json({ subtopics });
     } else {
       res.status(404).json({
         error: "Subtopics do not exist for the subchapter id",
@@ -98,4 +144,23 @@ export const getSubtopicsHandler = async (req: Request, res: Response) => {
     console.log(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
+};
+
+export const getSubtopicsByIdsHandler = async (
+  req: Request<{}, {}, {}, MultipleIdQueryParams>,
+  res: Response
+) => {
+  const { ids } = req.query;
+  if (ids === undefined || ids.length === 0) {
+    res.status(200).json({ chapters: [] });
+    return;
+  }
+  try {
+    let parsedIds = ids.map((id) => Number(id));
+    const subtopics = await getSubtopicsByIds(parsedIds);
+    res.status(200).json({ subtopics });
+  } catch (err) {
+    console.log(err);
+  }
+  return ids;
 };
