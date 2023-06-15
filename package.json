@@ -1,6 +1,9 @@
 {
   "name": "pocdoc-be",
   "version": "1.0.0",
+  "prisma": {
+    "seed": "ts-node ./prisma/seed/seed.ts"
+  },
   "description": "Backend for PocDoc",
   "main": "dist/index.js",
   "scripts": {
@@ -34,8 +37,10 @@
     "@types/node": "^18.11.17",
     "@types/supertest": "^2.0.12",
     "@typescript-eslint/parser": "^5.47.0",
+    "csv-parse": "^5.4.0",
     "eslint": "^8.25.0",
     "eslint-config-prettier": "^8.5.0",
+    "fs": "^0.0.1-security",
     "jest": "^29.3.1",
     "nodemon": "^2.0.20",
     "prettier": "2.7.1",

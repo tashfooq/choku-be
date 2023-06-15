@@ -3,7 +3,7 @@ dotenv.config({ path: ".env" });
 import createServer from "./utils/server";
 
 // get this port from env
-const port = 3001;
+const port = process.env.PORT;
 
 const app = createServer();
 

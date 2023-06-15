@@ -1,0 +1,350 @@
+name,chapter_id
+Molecular,1
+Cellular,1
+Laboratory Techniques,1
+Genetics,1
+Nutrition,1
+Metabolism,1
+Immunosuppressants,2
+Immune Responses,2
+Cellular Components,2
+Lymphoid Structures,2
+Basic Bacteriology,3
+Clinical Bacteriology,3
+Mycology,3
+Parasitology,3
+Virology,3
+Systems,3
+Antimicrobials,3
+Cellular Injury,4
+Inflammation,4
+Neoplasia,4
+Aging,4
+Pharmakinetics and Pharmacodynamics,5
+Autonomic Drugs,5
+Toxicities and Adverse Effects,5
+Miscellaneous,5
+Epidemiology and Biostatistics,6
+Ethics,6
+Communication Skills,6
+Healthcare Delivery,6
+Quality and Safety,6
+Embryology,7
+Anatomy,7
+Physiology,7
+Pathology,7
+Pharmacology,7
+Embryology,8
+Anatomy,8
+Physiology,8
+Pathology,8
+Pharmacology,8
+Embryology,9
+Anatomy,9
+Physiology,9
+Pathology,9
+Pharmacology,9
+Embryology,10
+Anatomy,10
+Physiology,10
+Pathology,10
+Pharmacology,10
+Embryology,11
+Anatomy,11
+Physiology,11
+Pathology,11
+Pharmacology,11
+Embryology,12
+Anatomy,12
+Physiology,12
+Pathology,12
+Pharmacology,12
+Embryology,13
+Anatomy,13
+Physiology,13
+Pathology,13
+Pharmacology,13
+Embryology,14
+Anatomy,14
+Physiology,14
+Pathology,14
+Pharmacology,14
+Embryology,15
+Anatomy,15
+Physiology,15
+Pathology,15
+Pharmacology,15
+Embryology,16
+Anatomy,16
+Physiology,16
+Pathology,16
+Pharmacology,16
+General Topics,18
+Molecular Biochemistry,19
+General Topics,17
+Metabolism,19
+Amino Acids,19
+Vitamins,19
+Lipids,19
+Other Topics,19
+Biostatistics,20
+Epidemiology,20
+Introduction to Cardiac Medicine,21
+Cardiac Ischemia,21
+EKGs,21
+Arrhythmias,21
+Cardiac Auscultations,21
+Heart Failure,21
+The Developing Heart,21
+Hypertension,21
+Other Cardiovascular Topics,21
+Molecular Biology,22
+Laboratory Technique,22
+Cellular Biology,22
+General Topics,23
+Thyroid,24
+Adrenals,24
+Pancreas,24
+Reproductive,24
+Other Topics,24
+Anatomy,25
+GI Physiology,25
+Clinical Gastroenterology,25
+Genetic Concepts,26
+Genetic Disorders,26
+Hemostasis,27
+Red Blood Cells,27
+White Blood Cells,27
+Cancer Drugs,27
+Other Topics,27
+Basic Immunology,28
+Clinical Immunology,28
+Pharmacology,28
+Autoimmune Disorders,28
+Basics of Microbiology,29
+Bacteria,29
+Antibiotics,29
+Fungi,29
+Parasites and Helminths,29
+Viruses,29
+Anatomy and Orthopedics,30
+Cell Biology,30
+Pathology,30
+Introduction to Neurology,31
+Nervous System Structures,31
+Neurovascular Disorders,31
+Autonomic Nervous System,31
+The Eye,31
+Anesthesia,31
+Other Neurology Topics,31
+General Topics,32
+Psychology,33
+Pathology,33
+Substance Use Disorders,33
+Pharmacology,33
+Introduction to Pulmonary Medicine,34
+Obstructive and Restrictive Diseases,34
+Other Pulmonary Topics,34
+Introduction to Renal Medicine,35
+Acid Base,35
+Electrolytes,35
+Diseases of the Nephron,35
+Other Renal Topics,35
+Embryology,36
+Pregnancy,36
+"Vagina, Cervix, Uterus",36
+Ovary,36
+Breast,36
+Male Disorders,36
+Other Topics,36
+Growth Adaptations,37
+Cellular Injury,37
+Cell Death,37
+Free Radical Injury,37
+Amyloidosis,37
+Acute Inflammation,38
+Chronic Inflammation,38
+Primary Immunodeficiency,38
+Autoimmune Disorders,38
+Wound Healing,38
+Carcinogenesis,39
+Tumor Progression,39
+Clinical Characteristics,39
+Primary Hemostasis and Related Bleeding Disorders,40
+Neoplasia,39
+Other Disorders of Hemostasis,40
+Thrombosis,40
+Embolism,40
+Anemia,41
+Microcytic Anemias,41
+Macrocytic Anemias,41
+Normocytic Anemia,41
+Normocytic Anemias w/ Extravascular Hemolysis,41
+Normocytic Anemias w/ Intravascular Hemolysis,41
+Anemia Due to Underproduction,41
+Lymphoma,42
+Hodgkin Lymphoma,42
+Plasma Cell Disorders (Dyscrasias),42
+Langerhans Cell Histiocytes,42
+Secondary Hemostasis and Related Disorders,40
+Anterior Pituitary Gland,51
+Posterior Pituitary Gland,51
+Thyroid Gland,51
+Hyperthyroidism,51
+Hypothyroidism,51
+Lymphadenopathy,42
+Myeloproliferative Disorders,42
+Chronic Leukemia,42
+Acute Leukemia,42
+Leukopenia and Leukocytosis,42
+Vasculitis,43
+Hypertension,43
+Artheriosclerosis,43
+Aortic Dissection and Aneurysm,43
+Vascular Tumors,43
+Ischemic Heart Disease,44
+Congestive Heart Failure,44
+Congenital Defects,44
+Valvular Disorders,44
+Endocarditis,44
+Cardiomyopathy,44
+Cardiac Tumors,44
+Nasopharynx,45
+Larynx,45
+Pulmonary Infections,45
+Chronic Obstructive Pulmonary Disease,45
+Restrictive Diseases,45
+Pulmonary Hypertension,45
+Respiratory Distress Syndrome,45
+Lung Cancer,45
+Pleura,45
+Oral Cavity,46
+Salivary Gland,46
+Esophagus,46
+Stomach,46
+Small Bowel,46
+Appendix,46
+Inflammatory Bowel Disease,46
+Colon,46
+Exocrine Pancreas,47
+Gallbladder and Biliary Tract,47
+Liver,47
+Congenital,48
+Acute Renal Failure,48
+Nephrotic Syndrome,48
+Nephritic Syndrome,48
+Urinary Tract Infection,48
+Nephrolithiasis,48
+Chronic Renal Failure,48
+Renal Neoplasia,48
+Lower Urinary Tract Carcinoma,48
+Vulva,49
+Vagina,49
+Cervix,49
+Endometrium and Myometrium,49
+Ovary,49
+Ovarian Tumors,49
+Gestational Pathology,49
+Penis,50
+Testicle,50
+Testicular Tumors,50
+Prostate,50
+Thyroiditis,51
+Thryoid Neoplasia,51
+Parathyroid Gland,51
+Endocrine Pancreas,51
+Adrenal Cortex,51
+Adrenal Medulla,51
+Introduction,52
+Inflammatory Conditions,52
+Benign Tumors and Fibrocystic Changes,52
+Breast Cancer,52
+Developmental Anomalies,53
+Spinal Cord Lesions,53
+Meningitis,53
+Cerebrovascular Disease,53
+Trauma,53
+Demyelinating Disorders,53
+Dementia and Degenerative Disorders,53
+CNS Tumors,53
+Skeletal System,54
+Bone Tumors,54
+Joint,54
+Skeletal Muscle,54
+Neuromuscular Junction,54
+Soft Tissue Tumors,54
+Inflammatory Dermatoses,55
+Blistering Dermatoses,55
+Epithelial Tumors,55
+Disorders of Pigmentation and Melanocytes,55
+Infectious Disorders,55
+Parasympathetic,56
+Sympathetic,56
+Retired Lessons,56
+Heart Failure Drugs,57
+Diuretics,57
+Antihypertensives,57
+Antiarrythmics,57
+Anticoagulants and Thrombolytics,58
+Dyslipidemia Drugs,58
+Anti-Inflammatory,58
+Allergy & Pulmonary,59
+Vasoactive,59
+Diabetes,60
+"Thyroid, Parathyroid, & Adrenal",60
+Hypothalamic & Pituitary,60
+Sex Hormones,60
+Retired Lessons,60
+GI,60
+Anesthetics & Analgesics,61
+Antidepressants & Anxiolytics,61
+Mood Stabilizers and Antiepileptic Drugs,61
+Antipsychotics and Parkinson's,61
+Psychostimulants: Narcolepsy & ADHD,61
+Sedative- Hypnotics,61
+Smoking Cessation Aids,61
+Retired Lessons,61
+Cell Wall and Membrane Active Antibiotics,62
+Inhibitors of Bacterial Protein Synthesis,62
+Antimycobacterials,62
+Other Antibiotics,62
+Antifungals,62
+Antivirals: HIV,62
+Antivirals: Other,62
+Retired Lessons,62
+Antimetabolites,63
+DNA & Cellular Division,63
+Kinase Inhibitors & Monoclonal Antibodies,63
+Immunology,63
+Pharmokinetic Basics,64
+Absorption,64
+Distribution,64
+Metabolism,64
+Elimination,64
+Pharmacodynamic Basics,64
+Drug-Drug Interactions,64
+Gram-Positive Cocci,65
+Gram-Positive Bacilli,65
+Gram-Positive Branching Filamentous Rods,65
+Gram-Negative Cocci,65
+Gram-Negative Bacilli- Enteric Tract,65
+Gram-Negative Bacilli - Respiratory Tract,65
+Gram-Negative Bacilli - Zoonotics,65
+Mycobacteria,65
+Spirochetes,65
+Gram Indeterminate Bacteria,65
+Retired Lessons,65
+Systemic Mycoses,66
+Cutaneous Mycoses,66
+Opportunistic Fungal Infections,66
+RNA Virus - Positive Sense,67
+RNA Virus - Negative Sense,67
+DNA Viruses,67
+Retired Lessons,67
+Protozoa of the Intestinal Tract,68
+Protozoa of the CNS,68
+Protozoa of the Blood,68
+Protozoa - Other Tissue,68
+Helminths - Nematodes,68
+Helminths - Trematodes and Cestodes,68
+Retired Lessons,68
