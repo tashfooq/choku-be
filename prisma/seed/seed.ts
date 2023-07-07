@@ -14,7 +14,7 @@ async function seedDatabase() {
 
   // Insert data into the database
   await prisma.textbooks.createMany({
-    data: file1Data.map((row) => ({
+    data: file1Data.slice(1).map((row) => ({
       name: row[0],
       author: row[1],
       edition: row[2],
@@ -22,21 +22,21 @@ async function seedDatabase() {
   });
 
   await prisma.chapters.createMany({
-    data: file2Data.map((row) => ({
+    data: file2Data.slice(1).map((row) => ({
       name: row[0],
       textbookId: Number(row[1]),
     })),
   });
 
   await prisma.subchapters.createMany({
-    data: file3Data.map((row) => ({
+    data: file3Data.slice(1).map((row) => ({
       name: row[0],
       chapterId: Number(row[1]),
     })),
   });
 
   await prisma.subtopics.createMany({
-    data: file4Data.map((row) => ({
+    data: file4Data.slice(1).map((row) => ({
       name: row[0],
       subchapterId: Number(row[1]),
     })),

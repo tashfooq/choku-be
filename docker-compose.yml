@@ -1,7 +1,7 @@
 version: "3.9"
 name: choku
 services:
-  database:
+  db:
     image: "postgres:latest"
     ports:
       - "5432:5432"
@@ -11,6 +11,20 @@ services:
       POSTGRES_DB: choku
     volumes:
       - ./db-data/:/var/lib/postgresql/data/
-      - ./choku-data/:/choku-data/
-      - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
-      - ./sql/populate-tables.sql:/docker-entrypoint-initdb.d/populate-tables.sql
+      # - ./choku-data/:/choku-data/
+      # - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
+      # - ./sql/populate-tables.sql:/docker-entrypoint-initdb.d/populate-tables.sql
+    healthcheck:
+      test: [ "CMD", "pg_isready -U postgres" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  # app:
+  #   depends_on:
+  #     db:
+  #       condition: service_healthy
+  #   ports:
+  #     - "3001:3001"
+  #   build:
+  #     context: ./
+  #     dockerfile: local.dockerfile
