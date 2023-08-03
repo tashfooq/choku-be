@@ -11,9 +11,9 @@ services:
       POSTGRES_DB: choku
     volumes:
       - ./db-data/:/var/lib/postgresql/data/
-      # - ./choku-data/:/choku-data/
-      # - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
-      # - ./sql/populate-tables.sql:/docker-entrypoint-initdb.d/populate-tables.sql
+      - ./choku-data/:/choku-data/
+      - ./sql/create-tables.sql:/docker-entrypoint-initdb.d/create-tables.sql
+      - ./sql/populate-tables.sql:/docker-entrypoint-initdb.d/populate-tables.sql
     healthcheck:
       test: [ "CMD", "pg_isready -U postgres" ]
       interval: 5s
