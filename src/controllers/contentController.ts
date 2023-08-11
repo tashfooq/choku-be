@@ -82,7 +82,6 @@ export const getChaptersByIdsHanbler = async (
   try {
     let parsedIds = ids.map((id) => Number(id));
     const chapters = await getChaptersByIds(parsedIds);
-    console.log(chapters);
     res.status(200).json({ chapters });
   } catch (err) {
     console.log(err);
@@ -96,7 +95,6 @@ export const getSubchaptersHandler = async (req: Request, res: Response) => {
       Number(chapterId)
     );
     if (subchapters.length !== 0) {
-      console.log({ subchapters });
       res.status(200).json({ subchapters });
     } else {
       res.status(404).json({
@@ -132,7 +130,6 @@ export const getSubtopicsHandler = async (req: Request, res: Response) => {
   const { subchapterId } = req.params;
   try {
     const subtopics = await getSubtopics(Number(subchapterId));
-    console.log(subtopics);
     if (subtopics.length !== 0) {
       res.status(200).json({ subtopics });
     } else {
