@@ -2,6 +2,7 @@ import express from "express";
 import cors from "cors";
 import contentRoute from "../routes/contentRoute";
 import progressRoute from "../routes/progressRoute";
+import feedbackRoute from "../routes/feedbackRoute";
 
 const createServer = () => {
   const app = express();
@@ -18,6 +19,8 @@ const createServer = () => {
   app.use("/content", contentRoute);
 
   app.use("/progress", progressRoute);
+
+  app.use("/feedback", feedbackRoute);
 
   return app;
 };
