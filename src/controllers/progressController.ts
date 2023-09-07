@@ -54,3 +54,8 @@ export const getProgressHandler = async (req: Request, res: Response) => {
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
+
+export const getTotalProgressHandler = async (req: Request, res: Response) => {
+  const totalProgress = await getTotalProgress(req.auth?.payload.sub as string);
+  console.log(totalProgress);
+};

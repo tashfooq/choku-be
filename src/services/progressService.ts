@@ -33,3 +33,16 @@ export const getProgress = async (userId: string) => {
   });
   return data;
 };
+
+export const getTotalProgress = async (userId: string) => {
+  const data = await prisma.progress.findFirst({
+    where: { userId },
+  });
+  if (data) {
+    const { selectedTextbookIds } = data;
+    const totalProgress =
+      data.chapterProgress + data.subchapterProgress + data.subtopicProgress;
+    return totalProgress;
+  }
+  // return data;
+};
