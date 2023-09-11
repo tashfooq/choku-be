@@ -5,7 +5,8 @@ import {
   getSubchaptersWithSubtopicCount,
   getChapters,
   getSubtopics,
-  getTextbooksById,
+  getTextbookById,
+  getTextbooksByIds,
   getChaptersByIds,
   getSubchaptersByIds,
   getSubtopicsByIds,
@@ -35,7 +36,7 @@ export const getAllTextbooksHandler = async (req: Request, res: Response) => {
 export const getTextbookByIdHandler = async (req: Request, res: Response) => {
   const { textbookId } = req.params;
   try {
-    const textbook = await getTextbooksById(Number(textbookId));
+    const textbook = await getTextbookById(Number(textbookId));
     if (typeof textbook != "undefined") {
       res.status(200).json({
         textbook,
@@ -48,6 +49,24 @@ export const getTextbookByIdHandler = async (req: Request, res: Response) => {
   } catch (err) {
     console.log(err);
     res.status(500).json({ error: internalServerErrorMsg });
+  }
+};
+
+export const getTextbooksByIdsHandler = async (
+  req: Request<{}, {}, {}, MultipleIdQueryParams>,
+  res: Response
+) => {
+  const { ids } = req.query;
+  if (ids === undefined || ids.length === 0) {
+    res.status(200).json({ textbooks: [] });
+    return;
+  }
+  try {
+    let parsedIds = ids.map((id) => Number(id));
+    const textbooks = await getTextbooksByIds(parsedIds);
+    res.status(200).json({ textbooks });
+  } catch (err) {
+    console.log(err);
   }
 };
 
@@ -70,7 +89,7 @@ export const getChaptersHandler = async (req: Request, res: Response) => {
   }
 };
 
-export const getChaptersByIdsHanbler = async (
+export const getChaptersByIdsHandler = async (
   req: Request<{}, {}, {}, MultipleIdQueryParams>,
   res: Response
 ) => {
@@ -107,7 +126,7 @@ export const getSubchaptersHandler = async (req: Request, res: Response) => {
   }
 };
 
-export const getSubchaptersByIdsHanbler = async (
+export const getSubchaptersByIdsHandler = async (
   req: Request<{}, {}, {}, MultipleIdQueryParams>,
   res: Response
 ) => {
