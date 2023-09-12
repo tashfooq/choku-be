@@ -1,6 +1,10 @@
 import { Request, Response } from "express";
 import { internalServerErrorMsg } from "../constants";
-import { getProgress, saveProgress } from "../services/progressService";
+import {
+  getProgress,
+  saveProgress,
+  getTotalProgress,
+} from "../services/progressService";
 
 export const saveProgressHandler = async (req: Request, res: Response) => {
   const {
@@ -32,7 +36,7 @@ export const saveProgressHandler = async (req: Request, res: Response) => {
       ...progress,
     });
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
@@ -50,12 +54,22 @@ export const getProgressHandler = async (req: Request, res: Response) => {
       });
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
 
-export const getTotalProgressHandler = async (req: Request, res: Response) => {
-  const totalProgress = await getTotalProgress(req.auth?.payload.sub as string);
-  console.log(totalProgress);
+export const getTotalProgressPercentageHandler = async (
+  req: Request,
+  res: Response
+) => {
+  try {
+    const totalProgress = await getTotalProgress(
+      req.auth?.payload.sub as string
+    );
+    res.status(200).json({ totalProgress });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ error: internalServerErrorMsg });
+  }
 };

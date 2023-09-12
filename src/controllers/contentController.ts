@@ -27,7 +27,7 @@ export const getAllTextbooksHandler = async (req: Request, res: Response) => {
       });
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
@@ -46,7 +46,7 @@ export const getTextbookByIdHandler = async (req: Request, res: Response) => {
       });
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
@@ -65,7 +65,7 @@ export const getChaptersHandler = async (req: Request, res: Response) => {
       });
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
@@ -84,7 +84,7 @@ export const getChaptersByIdsHanbler = async (
     const chapters = await getChaptersByIds(parsedIds);
     res.status(200).json({ chapters });
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
 };
 
@@ -102,7 +102,7 @@ export const getSubchaptersHandler = async (req: Request, res: Response) => {
       });
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
@@ -121,7 +121,7 @@ export const getSubchaptersByIdsHanbler = async (
     const subchapters = await getSubchaptersByIds(parsedIds);
     res.status(200).json({ subchapters });
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
   return ids;
 };
@@ -138,7 +138,7 @@ export const getSubtopicsHandler = async (req: Request, res: Response) => {
       });
     }
   } catch (err) {
-    console.log(err);
+    console.error(err);
     res.status(500).json({ error: internalServerErrorMsg });
   }
 };
@@ -157,7 +157,7 @@ export const getSubtopicsByIdsHandler = async (
     const subtopics = await getSubtopicsByIds(parsedIds);
     res.status(200).json({ subtopics });
   } catch (err) {
-    console.log(err);
+    console.error(err);
   }
   return ids;
 };
