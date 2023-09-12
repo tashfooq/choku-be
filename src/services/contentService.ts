@@ -13,12 +13,25 @@ export const getAllTextbooks = async (): Promise<textbooks[]> => {
   return data;
 };
 
-export const getTextbooksById = async (
+export const getTextbookById = async (
   textbookId: number
 ): Promise<textbooks | null> => {
   const data = await prisma.textbooks.findFirst({
     where: {
       id: textbookId,
+    },
+  });
+  return data;
+};
+
+export const getTextbooksByIds = async (
+  textbookIds: number[]
+): Promise<chapters[]> => {
+  const data = await prisma.chapters.findMany({
+    where: {
+      id: {
+        in: textbookIds,
+      },
     },
   });
   return data;
