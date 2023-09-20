@@ -17,7 +17,7 @@ COPY . .
 RUN npx prisma generate
 RUN npx prisma db push
 RUN npx prisma db seed
-RUN npx prisma migrate deploy
+# RUN npx prisma migrate deploy
 
 # Expose the port that the app will listen on
 EXPOSE 3001
