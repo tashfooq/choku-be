@@ -15,12 +15,31 @@ services:
     restart: unless-stopped
     volumes:
       - ./proxy.conf:/etc/nginx/conf.d/default.conf
+      - ./certbot/www:/var/www/certbot
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
     ports:
       - 80:80
+      - 443:443
     depends_on:
       - api 
     networks:
       - app-network
+
+  certbot:
+    image: certbot/certbot
+    container_name: certbot
+    volumes:
+      - certbot-etc:/etc/letsencrypt
+      - certbot-var:/var/lib/letsencrypt
+      - ./certbot/www:/var/www/certbot
+    depends_on:
+      - api
+    command: certonly --webroot --webroot-path=/var/www/certbot --email tash@choku.app --agree-tos --no-eff-email --force-renewal -d choku.xyz -d www.choku.xyz -d api.choku.xyz
+  
+volumes:
+  certbot-etc:
+  certbot-var:
 
 networks:
   app-network:
