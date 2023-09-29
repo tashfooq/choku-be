@@ -34,7 +34,7 @@ services:
       - ./certbot/www:/var/www/certbot
     depends_on:
       - api
-    command: certonly --webroot --webroot-path=/var/www/html --email tash@choku.app --agree-tos --no-eff-email --staging -d choku.app -d www.choku.app
+    command: certonly --webroot --webroot-path=/var/www/certbot --email tash@choku.app --agree-tos --no-eff-email --staging -d choku.app -d www.choku.app
   
 volumes:
   certbot-etc:
