@@ -1,15 +1,16 @@
 import fs from "fs";
 import { parse } from "csv-parse";
 import { PrismaClient } from "@prisma/client";
+import path from "path";
 
 const prisma = new PrismaClient();
 
 async function seedDatabase() {
   // Read and parse CSV files
-  const file1Data = await readCSV("choku-data/t.csv");
-  const file2Data = await readCSV("choku-data/c.csv");
-  const file3Data = await readCSV("choku-data/subc.csv");
-  const file4Data = await readCSV("choku-data/subt.csv");
+  const file1Data = await readCSV(path.join(__dirname, "choku-data/t.csv"));
+  const file2Data = await readCSV(path.join(__dirname, "choku-data/c.csv"));
+  const file3Data = await readCSV(path.join(__dirname, "choku-data/subc.csv"));
+  const file4Data = await readCSV(path.join(__dirname, "choku-data/subt.csv"));
   // ... Read other CSV files as needed
 
   // Insert data into the database
