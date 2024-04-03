@@ -10,25 +10,23 @@ import {
   getSubchaptersByIdsHandler,
   getSubtopicsByIdsHandler,
 } from "../controllers/contentController";
-import verifyToken from "../middleware/authMiddleware";
 import { getTextbooksByIds } from "../services/contentService";
+import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 const contentRoute = express.Router();
 
 // auth middleware
-contentRoute.use(verifyToken);
+contentRoute.use(ClerkExpressRequireAuth);
 
-contentRoute.get("/textbooks", getAllTextbooksHandler);
-contentRoute.get("/textbooks/:textbookId", getTextbookByIdHandler);
-contentRoute.get("/textbooksById", getTextbooksByIdsHandler)
-// need to remove the below route
-contentRoute.get("/textbooks/:textbookId/chapters", getChaptersHandler);
-// need to keep the route below
-contentRoute.get("/chapters/:chapterId", getChaptersHandler);
-contentRoute.get("/chapters", getChaptersByIdsHandler);
-// add an s after all these for consistenncy
+contentRoute.get("/textbook", getAllTextbooksHandler);
+contentRoute.get("/textbook/:textbookId", getTextbookByIdHandler);
+
+contentRoute.get("/chapter/:textbookId", getChaptersHandler);
+contentRoute.get("/chapter", getChaptersByIdsHandler);
+
 contentRoute.get("/subchapter/:chapterId", getSubchaptersHandler);
-contentRoute.get("/subchapters", getSubchaptersByIdsHandler);
+contentRoute.get("/subchapter", getSubchaptersByIdsHandler);
+
 contentRoute.get("/subtopic/:subchapterId", getSubtopicsHandler);
-contentRoute.get("/subtopics", getSubtopicsByIdsHandler);
+contentRoute.get("/subtopic", getSubtopicsByIdsHandler);
 
 export default contentRoute;

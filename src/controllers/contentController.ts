@@ -11,7 +11,6 @@ import {
   getSubchaptersByIds,
   getSubtopicsByIds,
 } from "../services/contentService";
-import { text } from "stream/consumers";
 
 interface MultipleIdQueryParams {
   ids: string[];
