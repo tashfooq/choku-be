@@ -1,3 +1,4 @@
+// import { WithAuthProp } from "@clerk/clerk-sdk-node";
 import { Request, Response } from "express";
 import { internalServerErrorMsg } from "../constants";
 import {
@@ -14,9 +15,12 @@ export const saveProgressHandler = async (req: Request, res: Response) => {
     subtopicProgress,
   } = req.body;
   try {
+    if (req.auth.userId == null) {
+      throw new Error("User id is missing");
+    }
     const progress = await saveProgress({
       where: {
-        userId: req.auth?.payload.sub,
+        userId: req.auth.userId,
       },
       update: {
         chapterProgress,
@@ -25,7 +29,7 @@ export const saveProgressHandler = async (req: Request, res: Response) => {
         subtopicProgress,
       },
       create: {
-        userId: req.auth?.payload.sub as string,
+        userId: req.auth.userId,
         chapterProgress,
         selectedTextbookIds,
         subchapterProgress,
@@ -43,7 +47,7 @@ export const saveProgressHandler = async (req: Request, res: Response) => {
 
 export const getProgressHandler = async (req: Request, res: Response) => {
   try {
-    const progress = await getProgress(req.auth?.payload.sub as string);
+    const progress = await getProgress(req.auth.userId);
     if (!!progress) {
       res.status(200).json({
         ...progress,

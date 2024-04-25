@@ -1,14 +1,14 @@
 import express from "express";
+import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 import {
   getProgressHandler,
   saveProgressHandler,
   getTotalProgressPercentageHandler,
 } from "../controllers/progressController";
-import verifyToken from "../middleware/authMiddleware";
 const progressRoute = express.Router();
 
 // auth middleware
-progressRoute.use(verifyToken);
+progressRoute.use(ClerkExpressRequireAuth);
 
 progressRoute.post("/", saveProgressHandler);
 progressRoute.get("/", getProgressHandler);

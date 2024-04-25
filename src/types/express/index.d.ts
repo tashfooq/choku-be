@@ -1,11 +1,9 @@
-import { User } from "../auth";
+import { WithAuthProp } from "@clerk/clerk-sdk-node";
+import { Request as ReqObj } from "express";
 
-export {};
-
+type Test = ReqObj;
 declare global {
   namespace Express {
-    interface Request {
-      user: User;
-    }
+    interface Request extends WithAuthProp<Test> {}
   }
 }
