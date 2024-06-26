@@ -3,10 +3,12 @@ import cors from "cors";
 import contentRoute from "../routes/contentRoute";
 import progressRoute from "../routes/progressRoute";
 import feedbackRoute from "../routes/feedbackRoute";
+import { createClerkClient } from "@clerk/clerk-sdk-node";
 
 const createServer = () => {
   const app = express();
   const json = express.json();
+  const clerk = createClerkClient({ apiKey: process.env.CLERK_API_KEY });
 
   app.use(json);
 
@@ -15,6 +17,8 @@ const createServer = () => {
   app.get("/", (req, res) => {
     res.status(200).send("This Worked!");
   });
+
+  app.use(clerk.expressRequireAuth());
 
   app.use("/content", contentRoute);
 

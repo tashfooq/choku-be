@@ -11,11 +11,7 @@ import {
   getSubtopicsByIdsHandler,
 } from "../controllers/contentController";
 import { getTextbooksByIds } from "../services/contentService";
-import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 const contentRoute = express.Router();
-
-// auth middleware
-contentRoute.use(ClerkExpressRequireAuth);
 
 contentRoute.get("/textbook", getAllTextbooksHandler);
 contentRoute.get("/textbook/:textbookId", getTextbookByIdHandler);

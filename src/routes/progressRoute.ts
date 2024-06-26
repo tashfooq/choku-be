@@ -3,15 +3,12 @@ import { ClerkExpressRequireAuth } from "@clerk/clerk-sdk-node";
 import {
   getProgressHandler,
   saveProgressHandler,
-  getTotalProgressPercentageHandler,
+  // getTotalProgressPercentageHandler,
 } from "../controllers/progressController";
 const progressRoute = express.Router();
 
-// auth middleware
-progressRoute.use(ClerkExpressRequireAuth);
-
 progressRoute.post("/", saveProgressHandler);
 progressRoute.get("/", getProgressHandler);
-progressRoute.get("/percentage", getTotalProgressPercentageHandler);
+// progressRoute.get("/percentage", getTotalProgressPercentageHandler);
 
 export default progressRoute;

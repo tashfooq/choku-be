@@ -8,7 +8,7 @@ import {
 import {
   getProgress,
   saveProgress,
-  getTotalProgress,
+  // getTotalProgress,
 } from "../services/progressService";
 
 export const saveProgressHandler = async (
