@@ -8,7 +8,9 @@ import { createClerkClient } from "@clerk/clerk-sdk-node";
 const createServer = () => {
   const app = express();
   const json = express.json();
-  const clerk = createClerkClient({ apiKey: process.env.CLERK_API_KEY });
+  const clerk = createClerkClient({
+    secretKey: process.env.CLERK_SECRET_KEY || "",
+  });
 
   app.use(json);
 
