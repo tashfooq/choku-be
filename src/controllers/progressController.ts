@@ -1,4 +1,4 @@
-import { RequireAuthProp, WithAuthProp } from "@clerk/clerk-sdk-node";
+import { RequireAuthProp } from "@clerk/clerk-sdk-node";
 import { Request, Response } from "express";
 import {
   internalServerErrorMsg,
@@ -53,7 +53,7 @@ export const saveProgressHandler = async (
 };
 
 export const getProgressHandler = async (
-  req: WithAuthProp<Request>,
+  req: RequireAuthProp<Request>,
   res: Response
 ) => {
   try {
