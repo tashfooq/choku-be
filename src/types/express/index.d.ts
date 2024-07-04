@@ -1,11 +1,7 @@
-import { User } from "../auth";
-
-export {};
+import { StrictAuthProp } from "@clerk/clerk-sdk-node";
 
 declare global {
   namespace Express {
-    interface Request {
-      user: User;
-    }
+    interface Request extends StrictAuthProp {}
   }
 }
